@@ -44,7 +44,7 @@ class LoginScreen extends StatelessWidget{
                      defultTextForm(controller:passController ,
                        validate:(String? value){
                          if(value!.isEmpty){
-                           return'The Password Can\'t Empty';
+                           return'The Password Can\'t Empty.';
                          }} ,
                        label: 'Password ',
                        ispassword: loginCubit.get(context).showPassword,

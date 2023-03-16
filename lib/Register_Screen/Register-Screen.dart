@@ -47,19 +47,15 @@ class LoginScreen extends StatelessWidget{
                            return'The Password Can\'t Empty';
                          }} ,
                        label: 'Password ',
-                       ispassword: loginCubit.get(context).showPassword,
-                       sufixIcon:loginCubit.get(context).showPassword?IconButton(onPressed: () {}, icon: Icon(Icons.visibility),):
-                       IconButton(onPressed: () {}, icon: Icon(Icons.visibility_off_outlined), ),
+                       sufixIcon:Icon(Icons.remove_red_eye_outlined) ,
                        sufixPressed: (){},
-
                        prefixIcon: Icon(Icons.password_rounded),
                        keyboardType:TextInputType.visiblePassword,),
                      SizedBox(height: 20,),
-                     defultButton(label: 'LOGIN', onPressed: () {
-                       if(formkey.currentState!.validate()){
+                     defultButton(label: 'LOGIN', onPressed: (){
 
-                       }
-                     })
+                     },
+                         defultcolor: Colors.blueAccent),
                    ],
                  ),
                ),

@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-Color defultcolor=Colors.blueGrey;
+Color defultcolor =Colors.black12;
 ///////////////////////////////defultTextForm//////////////////////////
 Widget defultTextForm(
-{
-   validate ,
-   onChanged,
-   onTab,
-   sufixIcon,
-  hintText,
-  sufixPressed,
-  required TextEditingController controller,
-  required String label,
-  required Icon prefixIcon,
-  required var keyboardType,
- bool ispassword=false,
-}
+    {
+      validate ,
+      onChanged,
+      onTab,
+      sufixIcon,
+      hintText,
+      sufixPressed,
+      required TextEditingController controller,
+      required String label,
+      required Icon prefixIcon,
+      required var keyboardType,
+      bool ispassword=false,
+    }
     )=>TextFormField(
 
   controller:controller,
@@ -64,9 +64,9 @@ void toast({
 );
 /////////////////////////////////////SIGNOUT////////////////////////
 // void signOut(context)=> CacheHelper.removeData(Key: 'token').then((value){
-// if(value){
-// Navigator.pushReplacement(context,MaterialPageRoute(builder: (context)=>LoginScreen()));
-// }
+//   if(value){
+//     Navigator.pushReplacement(context,MaterialPageRoute(builder: (context)=>LoginScreen()));
+//   }
 // });
 /////////
 //     bottomNavigationBar: BottomNavigationBar(

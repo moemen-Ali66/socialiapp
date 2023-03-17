@@ -8,13 +8,18 @@ class LoginScreen extends StatelessWidget{
   var mailController=TextEditingController();
   var passController=TextEditingController();
   var formkey=GlobalKey<FormState>();
+
   @override
+  
   Widget build(BuildContext context) {
+
    return BlocProvider(
+    
      create: (BuildContext context) =>loginCubit(),
      child: BlocConsumer<loginCubit,loginState>(
        listener:(context,state){} ,
        builder: (context,state)=>Scaffold(
+
          appBar: AppBar(
          ),
          body:Center(
@@ -41,19 +46,22 @@ class LoginScreen extends StatelessWidget{
                        keyboardType:TextInputType.emailAddress,),
                      SizedBox(height: 20,),
 
-                     defultTextForm(controller:passController ,
+                     defultTextForm(
+                      controller:passController ,
                        validate:(String? value){
                          if(value!.isEmpty){
                            return'The Password Can\'t Empty.';
                          }} ,
+  
                          
                        label: 'Password ',
-                       ispassword: loginCubit.get(context).showPassword,
-                       sufixIcon:IconButton(onPressed: (){loginCubit.get(context).changeIcon();},
-                        icon: loginCubit.get(context).showPassword?Icon(Icons.visibility):Icon(Icons.visibility_off_outlined)),
-                       sufixPressed: (){IconButton(onPressed: (){loginCubit.get(context).changeIcon();},
-                        icon: loginCubit.get(context).showPassword?Icon(Icons.visibility):Icon(Icons.visibility_off_outlined),);},
-
+                       ispassword:  loginCubit.get(context).showPassword,
+                       sufixIcon:IconButton(onPressed: (){
+                           loginCubit.get(context).changeIcon();
+                        }, icon: loginCubit.get(context).showPassword?
+                         Icon(Icons.visibility_off_outlined):
+                        Icon(Icons.visibility_outlined),),
+                      
                        prefixIcon: Icon(Icons.password_rounded),
                        keyboardType:TextInputType.visiblePassword,),
                      SizedBox(height: 20,),

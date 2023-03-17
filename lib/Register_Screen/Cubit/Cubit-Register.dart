@@ -1,17 +1,14 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:socialiapp/Login_Screen/Cubit/State-Login.dart';
+import 'package:socialiapp/Register_Screen/Cubit/State-Register.dart';
 
-class loginCubit extends Cubit<loginState>{
-  loginCubit():super(InitialState());
-
-  static loginCubit get(context)=>BlocProvider.of(context);
-
-  bool showPassword =true;
-  void changeIcon(){
-    showPassword != showPassword;
-    emit(cahngeIconState());
+class registerCubit extends Cubit<registerState>{
+  registerCubit():super(InitialState()) {
   }
+
+  static registerCubit get(context)=>BlocProvider.of(context);
+
+ 
 
 }

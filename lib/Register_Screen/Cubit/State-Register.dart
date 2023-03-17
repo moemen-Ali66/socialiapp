@@ -1,11 +1,9 @@
-abstract class loginState {}
+abstract class registerState {}
 
-class InitialState extends loginState{}
+class InitialState extends registerState{}
 
-class LoadingLoginState extends loginState{}
+class LoadingRegisteState extends registerState{}
 
-class SuccessLoginState extends loginState{}
+class SuccessRegisteState extends registerState{}
 
-class ErorrLoginState extends loginState{}
-
-class cahngeIconState extends loginState{}
+class ErorrRegisterState extends registerState{}
